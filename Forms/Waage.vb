@@ -191,6 +191,7 @@ Public Class Waage
     End Sub
 
     Private Sub Waage_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        'TEst
         If e.KeyValue = 112 Or e.KeyValue = 113 Or e.KeyValue = 114 Then
             Aktueller_Wert.TYP = e.KeyValue
             SP_Waage.Write(My.Settings.Send_Waage & vbLf & vbCr) 'concatenate with \n
