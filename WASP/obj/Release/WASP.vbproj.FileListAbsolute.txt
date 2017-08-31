@@ -1,0 +1,14 @@
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\bin\Release\WASP.exe.config
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\bin\Release\WASP.exe
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\bin\Release\WASP.pdb
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\bin\Release\WASP.xml
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\obj\Release\WASP.MainForm.resources
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\obj\Release\WASP.Settings.resources
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\obj\Release\WASP.Waage.resources
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\obj\Release\WASP.Resources.resources
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\obj\Release\WASP.vbproj.GenerateResource.Cache
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\obj\Release\WASP.vbproj.CoreCompileInputs.cache
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\obj\Release\WASP.exe
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\obj\Release\WASP.xml
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\obj\Release\WASP.pdb
+C:\Users\Florian\Documents\Visual Studio 2017\Projects\WASP\WASP\obj\Release\WASP.vbprojResolveAssemblyReference.cache
