@@ -29,5 +29,8 @@
     <Setting Name="W_on" Type="System.String" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="D_on" Type="System.String" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

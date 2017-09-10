@@ -19,6 +19,8 @@ Public Class Settings
         My.Settings.Stop_Bits_Waage = SB_W.Text
         My.Settings.Drucker = Drucker.Text
         My.Settings.Drucker = Drucker.Text
+        My.Settings.D_on = cb_Drucker.Checked
+        My.Settings.W_on = cb_Waage.Checked
         OpenForm(Waage, MainForm.MainPanel)
     End Sub
 
@@ -35,6 +37,8 @@ Public Class Settings
         P_W.Text = My.Settings.Parity_Waage
         DB_W.Text = My.Settings.Data_Bits_Waage
         SB_W.Text = My.Settings.Stop_Bits_Waage
+        cb_Drucker.Checked = My.Settings.D_on
+        cb_Waage.Checked = My.Settings.W_on
         'Drucker einrichten
         For Each sPrinter As String In PrinterSettings.InstalledPrinters
             Drucker.Items.Add(sPrinter)

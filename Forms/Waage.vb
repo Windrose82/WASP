@@ -153,7 +153,7 @@ Public Class Waage
     End Sub
 
     Private Sub Waage_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
-        'TEst
+        Dim printer As New myPrinter
         If e.KeyValue = 112 Or e.KeyValue = 113 Or e.KeyValue = 114 Then
             Aktueller_Wert.TYP = e.KeyValue
             SP_Waage.Write(My.Settings.Send_Waage & vbLf & vbCr) 'concatenate with \n
@@ -214,10 +214,12 @@ Public Class Waage
             ElseIf Aktueller_Wert.TYP = 113 Then
                 RECO.ANTRIEB_R = Aktueller_Wert.Wert
                 tb_R_AS.Text = RECO.Antrieb()
+                printer.prt("RECO AS " & Date.Now & vbCrLf & RECO.ANTRIEB_E & " - " & RECO.ANTRIEB_R & " = " & RECO.Antrieb())
             ElseIf Aktueller_Wert.TYP = 114 Then
                 RECO.ANTRIEB_R = 0
                 RECO.ANTRIEB_E = Aktueller_Wert.Wert
                 tb_R_AS.Text = RECO.Antrieb()
+                printer.prt("RECO AS " & Date.Now & vbCrLf & RECO.ANTRIEB_E & " - " & RECO.ANTRIEB_R & " = " & RECO.Antrieb())
             End If
         ElseIf e.KeyValue = 50 And MainTab.SelectedTab.TabIndex = 0 Then
             If Aktueller_Wert.TYP = 112 Then
@@ -225,23 +227,27 @@ Public Class Waage
             ElseIf Aktueller_Wert.TYP = 113 Then
                 RECO.MITTE_R = Aktueller_Wert.Wert
                 tb_R_M.Text = RECO.Mitte()
+                printer.prt("RECO M " & Date.Now & vbCrLf & RECO.MITTE_E & " - " & RECO.MITTE_R & " = " & RECO.Mitte())
             ElseIf Aktueller_Wert.TYP = 114 Then
                 RECO.MITTE_R = 0
                 RECO.MITTE_E = Aktueller_Wert.Wert
                 tb_R_M.Text = RECO.Mitte()
+                printer.prt("RECO M " & Date.Now & vbCrLf & RECO.MITTE_E & " - " & RECO.MITTE_R & " = " & RECO.Mitte())
             End If
         ElseIf e.KeyValue = 51 And MainTab.SelectedTab.TabIndex = 0 Then
             If Aktueller_Wert.TYP = 112 Then
                 RECO.BEDIEN_E = Aktueller_Wert.Wert
             ElseIf Aktueller_Wert.TYP = 113 Then
                 RECO.BEDIEN_R = Aktueller_Wert.Wert
-                tb_R_BS.Text = RECO.Mitte()
+                tb_R_BS.Text = RECO.Bedien()
+                printer.prt("RECO BS " & Date.Now & vbCrLf & RECO.BEDIEN_E & " - " & RECO.BEDIEN_R & " = " & RECO.Bedien())
                 tb_R_Mitt.Text = RECO.Mittelwert
                 tb_R_Span.Text = RECO.Spannweite
             ElseIf Aktueller_Wert.TYP = 114 Then
                 RECO.BEDIEN_R = 0
                 RECO.BEDIEN_E = Aktueller_Wert.Wert
-                tb_R_BS.Text = RECO.Mitte()
+                tb_R_BS.Text = RECO.Bedien()
+                printer.prt("RECO BS " & Date.Now & vbCrLf & RECO.BEDIEN_E & " - " & RECO.BEDIEN_R & " = " & RECO.Bedien())
                 tb_R_Mitt.Text = RECO.Mittelwert
                 tb_R_Span.Text = RECO.Spannweite
             End If
@@ -251,10 +257,12 @@ Public Class Waage
             ElseIf Aktueller_Wert.TYP = 113 Then
                 PAGENDARM.ANTRIEB_R = Aktueller_Wert.Wert
                 tb_P_AS.Text = PAGENDARM.Antrieb()
+                printer.prt("PAGENDARM AS " & Date.Now & vbCrLf & PAGENDARM.ANTRIEB_E & " - " & PAGENDARM.ANTRIEB_R & " = " & PAGENDARM.Antrieb())
             ElseIf Aktueller_Wert.TYP = 114 Then
                 PAGENDARM.ANTRIEB_R = 0
                 PAGENDARM.ANTRIEB_E = Aktueller_Wert.Wert
                 tb_P_AS.Text = PAGENDARM.Antrieb()
+                printer.prt("PAGENDARM AS " & Date.Now & vbCrLf & PAGENDARM.ANTRIEB_E & " - " & PAGENDARM.ANTRIEB_R & " = " & PAGENDARM.Antrieb())
             End If
         ElseIf e.KeyValue = 50 And MainTab.SelectedTab.TabIndex = 1 Then
             If Aktueller_Wert.TYP = 112 Then
@@ -262,23 +270,27 @@ Public Class Waage
             ElseIf Aktueller_Wert.TYP = 113 Then
                 PAGENDARM.MITTE_R = Aktueller_Wert.Wert
                 tb_P_M.Text = PAGENDARM.Mitte()
+                printer.prt("PAGENDARM M " & Date.Now & vbCrLf & PAGENDARM.MITTE_E & " - " & PAGENDARM.MITTE_R & " = " & PAGENDARM.Mitte())
             ElseIf Aktueller_Wert.TYP = 114 Then
                 PAGENDARM.MITTE_R = 0
                 PAGENDARM.MITTE_E = Aktueller_Wert.Wert
                 tb_P_M.Text = PAGENDARM.Mitte()
+                printer.prt("PAGENDARM M " & Date.Now & vbCrLf & PAGENDARM.MITTE_E & " - " & PAGENDARM.MITTE_R & " = " & PAGENDARM.Mitte())
             End If
         ElseIf e.KeyValue = 51 And MainTab.SelectedTab.TabIndex = 1 Then
             If Aktueller_Wert.TYP = 112 Then
                 PAGENDARM.BEDIEN_E = Aktueller_Wert.Wert
             ElseIf Aktueller_Wert.TYP = 113 Then
                 PAGENDARM.BEDIEN_R = Aktueller_Wert.Wert
-                tb_P_BS.Text = PAGENDARM.Mitte()
+                tb_P_BS.Text = PAGENDARM.Bedien()
+                printer.prt("PAGENDARM BS " & Date.Now & vbCrLf & PAGENDARM.BEDIEN_E & " - " & PAGENDARM.BEDIEN_R & " = " & PAGENDARM.Bedien())
                 tb_P_Mitt.Text = PAGENDARM.Mittelwert
                 tb_P_Span.Text = PAGENDARM.Spannweite
             ElseIf Aktueller_Wert.TYP = 114 Then
                 PAGENDARM.BEDIEN_R = 0
                 PAGENDARM.BEDIEN_E = Aktueller_Wert.Wert
-                tb_P_BS.Text = PAGENDARM.Mitte()
+                tb_P_BS.Text = PAGENDARM.Bedien()
+                printer.prt("PAGENDARM BS " & Date.Now & vbCrLf & PAGENDARM.BEDIEN_E & " - " & PAGENDARM.BEDIEN_R & " = " & PAGENDARM.Bedien())
                 tb_P_Mitt.Text = PAGENDARM.Mittelwert
                 tb_P_Span.Text = PAGENDARM.Spannweite
             End If
@@ -288,10 +300,12 @@ Public Class Waage
             ElseIf Aktueller_Wert.TYP = 113 Then
                 NORDSON.ANTRIEB_R = Aktueller_Wert.Wert
                 tb_N_AS.Text = NORDSON.Antrieb()
+                printer.prt("NORDSON AS " & Date.Now & vbCrLf & NORDSON.ANTRIEB_E & " - " & NORDSON.ANTRIEB_R & " = " & NORDSON.Antrieb())
             ElseIf Aktueller_Wert.TYP = 114 Then
                 NORDSON.ANTRIEB_R = 0
                 NORDSON.ANTRIEB_E = Aktueller_Wert.Wert
                 tb_N_AS.Text = NORDSON.Antrieb()
+                printer.prt("NORDSON AS " & Date.Now & vbCrLf & NORDSON.ANTRIEB_E & " - " & NORDSON.ANTRIEB_R & " = " & NORDSON.Antrieb())
             End If
         ElseIf e.KeyValue = 50 And MainTab.SelectedTab.TabIndex = 2 Then
             If Aktueller_Wert.TYP = 112 Then
@@ -299,23 +313,27 @@ Public Class Waage
             ElseIf Aktueller_Wert.TYP = 113 Then
                 NORDSON.MITTE_R = Aktueller_Wert.Wert
                 tb_N_M.Text = NORDSON.Mitte()
+                printer.prt("NORDSON M " & Date.Now & vbCrLf & NORDSON.MITTE_E & " - " & NORDSON.MITTE_R & " = " & NORDSON.Mitte())
             ElseIf Aktueller_Wert.TYP = 114 Then
                 NORDSON.MITTE_R = 0
                 NORDSON.MITTE_E = Aktueller_Wert.Wert
                 tb_N_M.Text = NORDSON.Mitte()
+                printer.prt("NORDSON M " & Date.Now & vbCrLf & NORDSON.MITTE_E & " - " & NORDSON.MITTE_R & " = " & NORDSON.Mitte())
             End If
         ElseIf e.KeyValue = 51 And MainTab.SelectedTab.TabIndex = 2 Then
             If Aktueller_Wert.TYP = 112 Then
                 NORDSON.BEDIEN_E = Aktueller_Wert.Wert
             ElseIf Aktueller_Wert.TYP = 113 Then
                 NORDSON.BEDIEN_R = Aktueller_Wert.Wert
-                tb_N_BS.Text = NORDSON.Mitte()
+                tb_N_BS.Text = NORDSON.Bedien()
+                printer.prt("NORDSON BS " & Date.Now & vbCrLf & NORDSON.BEDIEN_E & " - " & NORDSON.BEDIEN_R & " = " & NORDSON.Bedien())
                 tb_N_Mitt.Text = NORDSON.Mittelwert
                 tb_N_Span.Text = NORDSON.Spannweite
             ElseIf Aktueller_Wert.TYP = 114 Then
                 NORDSON.BEDIEN_R = 0
                 NORDSON.BEDIEN_E = Aktueller_Wert.Wert
-                tb_N_BS.Text = NORDSON.Mitte()
+                tb_N_BS.Text = NORDSON.Bedien()
+                printer.prt("NORDSON BS " & Date.Now & vbCrLf & NORDSON.BEDIEN_E & " - " & NORDSON.BEDIEN_R & " = " & NORDSON.Bedien())
                 tb_N_Mitt.Text = NORDSON.Mittelwert
                 tb_N_Span.Text = NORDSON.Spannweite
             End If

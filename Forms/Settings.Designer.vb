@@ -57,6 +57,7 @@ Partial Class Settings
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.btn_cancel = New System.Windows.Forms.Button()
         Me.btn_save = New System.Windows.Forms.Button()
+        Me.cb_Drucker = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.COMPorts.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -116,6 +117,7 @@ Partial Class Settings
         Me.TableLayoutPanel1.Controls.Add(Me.DB_W, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.HS_W, 1, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.Handshake, 0, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.cb_Drucker, 6, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 3)
@@ -487,6 +489,19 @@ Partial Class Settings
         Me.btn_save.TabIndex = 1
         Me.btn_save.UseVisualStyleBackColor = True
         '
+        'cb_Drucker
+        '
+        Me.cb_Drucker.AutoSize = True
+        Me.cb_Drucker.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.cb_Drucker.Checked = True
+        Me.cb_Drucker.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.cb_Drucker.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cb_Drucker.Location = New System.Drawing.Point(535, 3)
+        Me.cb_Drucker.Name = "cb_Drucker"
+        Me.cb_Drucker.Size = New System.Drawing.Size(24, 24)
+        Me.cb_Drucker.TabIndex = 34
+        Me.cb_Drucker.UseVisualStyleBackColor = True
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -542,4 +557,5 @@ Partial Class Settings
     Friend WithEvents DB_W As ComboBox
     Friend WithEvents HS_W As ComboBox
     Friend WithEvents Handshake As Label
+    Friend WithEvents cb_Drucker As CheckBox
 End Class

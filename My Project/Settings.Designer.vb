@@ -161,6 +161,18 @@ Namespace My
                 Me("W_on") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property D_on() As String
+            Get
+                Return CType(Me("D_on"),String)
+            End Get
+            Set
+                Me("D_on") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
