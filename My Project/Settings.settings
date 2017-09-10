@@ -14,37 +14,19 @@
     <Setting Name="Stop_Bits_Waage" Type="System.String" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>
-    <Setting Name="Baud_Rate_Drucker" Type="System.String" Scope="User">
-      <Value Profile="(Default)">9600</Value>
-    </Setting>
-    <Setting Name="Parity_Drucker" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Even</Value>
-    </Setting>
-    <Setting Name="Data_Bits_Drucker" Type="System.String" Scope="User">
-      <Value Profile="(Default)">8</Value>
-    </Setting>
-    <Setting Name="Stop_Bits_Drucker" Type="System.String" Scope="User">
-      <Value Profile="(Default)">1</Value>
-    </Setting>
     <Setting Name="COM_Waage" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="COM_Drucker" Type="System.String" Scope="User">
+    <Setting Name="Drucker" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Send_Waage" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Send_Drucker" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Hand_Shake_W" Type="System.String" Scope="User">
       <Value Profile="(Default)">None</Value>
     </Setting>
     <Setting Name="W_on" Type="System.String" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="D_on" Type="System.String" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>

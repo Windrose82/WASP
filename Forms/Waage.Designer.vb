@@ -99,7 +99,8 @@ Partial Class Waage
         Me.Label13 = New System.Windows.Forms.Label()
         Me.tb_N_Mitt = New System.Windows.Forms.TextBox()
         Me.SP_Waage = New System.IO.Ports.SerialPort(Me.components)
-        Me.SP_Drucker = New System.IO.Ports.SerialPort(Me.components)
+        Me.Print = New System.Windows.Forms.PrintDialog()
+        Me.Document = New System.Drawing.Printing.PrintDocument()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -1119,6 +1120,10 @@ Partial Class Waage
         '
         Me.SP_Waage.Handshake = System.IO.Ports.Handshake.XOnXOff
         '
+        'Print
+        '
+        Me.Print.UseEXDialog = True
+        '
         'Waage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1157,7 +1162,6 @@ Partial Class Waage
     Friend WithEvents init As Button
     Friend WithEvents F2 As Button
     Friend WithEvents SP_Waage As IO.Ports.SerialPort
-    Friend WithEvents SP_Drucker As IO.Ports.SerialPort
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents disconnect As Button
@@ -1229,4 +1233,6 @@ Partial Class Waage
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents Label25 As Label
+    Friend WithEvents Print As PrintDialog
+    Friend WithEvents Document As Printing.PrintDocument
 End Class

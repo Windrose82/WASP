@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Settings
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,14 @@ Partial Class Settings
     'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
     'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Settings))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.COMPorts = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.P_D = New System.Windows.Forms.ComboBox()
-        Me.COM_D = New System.Windows.Forms.ComboBox()
+        Me.Drucker = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -38,16 +37,13 @@ Partial Class Settings
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.SB_W = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.SB_D = New System.Windows.Forms.TextBox()
-        Me.DB_D = New System.Windows.Forms.TextBox()
         Me.COM_W = New System.Windows.Forms.ComboBox()
         Me.P_W = New System.Windows.Forms.ComboBox()
         Me.cb_Waage = New System.Windows.Forms.CheckBox()
-        Me.cb_Drucker = New System.Windows.Forms.CheckBox()
+        Me.BR_W = New System.Windows.Forms.ComboBox()
+        Me.DB_W = New System.Windows.Forms.ComboBox()
+        Me.HS_W = New System.Windows.Forms.ComboBox()
+        Me.Handshake = New System.Windows.Forms.Label()
         Me.Keys = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -61,11 +57,6 @@ Partial Class Settings
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.btn_cancel = New System.Windows.Forms.Button()
         Me.btn_save = New System.Windows.Forms.Button()
-        Me.BR_W = New System.Windows.Forms.ComboBox()
-        Me.BR_D = New System.Windows.Forms.ComboBox()
-        Me.DB_W = New System.Windows.Forms.ComboBox()
-        Me.Handshake = New System.Windows.Forms.Label()
-        Me.HS_W = New System.Windows.Forms.ComboBox()
         Me.TabControl1.SuspendLayout()
         Me.COMPorts.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -107,9 +98,8 @@ Partial Class Settings
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.P_D, 5, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.COM_D, 5, 1)
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Drucker, 5, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label13, 4, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label8, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
@@ -119,18 +109,10 @@ Partial Class Settings
         Me.TableLayoutPanel1.Controls.Add(Me.Label7, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.SB_W, 1, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label6, 4, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label12, 4, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label9, 4, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label5, 4, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.SB_D, 5, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.DB_D, 5, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.COM_W, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.P_W, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.cb_Waage, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.cb_Drucker, 6, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.BR_W, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.BR_D, 5, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.DB_W, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.HS_W, 1, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.Handshake, 0, 6)
@@ -150,26 +132,15 @@ Partial Class Settings
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(613, 238)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'P_D
+        'Drucker
         '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.P_D, 2)
-        Me.P_D.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.P_D.FormattingEnabled = True
-        Me.P_D.Items.AddRange(New Object() {"None", "Even", "Odd", "Mark", "Space"})
-        Me.P_D.Location = New System.Drawing.Point(422, 93)
-        Me.P_D.Name = "P_D"
-        Me.P_D.Size = New System.Drawing.Size(137, 24)
-        Me.P_D.TabIndex = 26
-        '
-        'COM_D
-        '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.COM_D, 2)
-        Me.COM_D.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.COM_D.FormattingEnabled = True
-        Me.COM_D.Location = New System.Drawing.Point(422, 33)
-        Me.COM_D.Name = "COM_D"
-        Me.COM_D.Size = New System.Drawing.Size(137, 24)
-        Me.COM_D.TabIndex = 24
+        Me.TableLayoutPanel1.SetColumnSpan(Me.Drucker, 2)
+        Me.Drucker.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Drucker.FormattingEnabled = True
+        Me.Drucker.Location = New System.Drawing.Point(422, 33)
+        Me.Drucker.Name = "Drucker"
+        Me.Drucker.Size = New System.Drawing.Size(137, 24)
+        Me.Drucker.TabIndex = 24
         '
         'Label13
         '
@@ -179,7 +150,7 @@ Partial Class Settings
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(107, 30)
         Me.Label13.TabIndex = 22
-        Me.Label13.Text = "COM"
+        Me.Label13.Text = "Drucker"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label8
@@ -271,70 +242,6 @@ Partial Class Settings
         Me.SB_W.Size = New System.Drawing.Size(137, 22)
         Me.SB_W.TabIndex = 18
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label6.Location = New System.Drawing.Point(309, 150)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(107, 30)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Stop Bit"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label12.Location = New System.Drawing.Point(309, 120)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(107, 30)
-        Me.Label12.TabIndex = 11
-        Me.Label12.Text = "Data Bits"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label9.Location = New System.Drawing.Point(309, 90)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(107, 30)
-        Me.Label9.TabIndex = 8
-        Me.Label9.Text = "Parity"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.Location = New System.Drawing.Point(309, 60)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(107, 30)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Baud Rate"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'SB_D
-        '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.SB_D, 2)
-        Me.SB_D.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SB_D.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SB_D.Location = New System.Drawing.Point(422, 153)
-        Me.SB_D.Name = "SB_D"
-        Me.SB_D.Size = New System.Drawing.Size(137, 22)
-        Me.SB_D.TabIndex = 19
-        '
-        'DB_D
-        '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.DB_D, 2)
-        Me.DB_D.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DB_D.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DB_D.Location = New System.Drawing.Point(422, 123)
-        Me.DB_D.Name = "DB_D"
-        Me.DB_D.Size = New System.Drawing.Size(137, 22)
-        Me.DB_D.TabIndex = 17
-        '
         'COM_W
         '
         Me.TableLayoutPanel1.SetColumnSpan(Me.COM_W, 2)
@@ -369,18 +276,48 @@ Partial Class Settings
         Me.cb_Waage.TabIndex = 27
         Me.cb_Waage.UseVisualStyleBackColor = True
         '
-        'cb_Drucker
+        'BR_W
         '
-        Me.cb_Drucker.AutoSize = True
-        Me.cb_Drucker.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cb_Drucker.Checked = True
-        Me.cb_Drucker.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cb_Drucker.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.cb_Drucker.Location = New System.Drawing.Point(535, 3)
-        Me.cb_Drucker.Name = "cb_Drucker"
-        Me.cb_Drucker.Size = New System.Drawing.Size(24, 24)
-        Me.cb_Drucker.TabIndex = 28
-        Me.cb_Drucker.UseVisualStyleBackColor = True
+        Me.TableLayoutPanel1.SetColumnSpan(Me.BR_W, 2)
+        Me.BR_W.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BR_W.FormattingEnabled = True
+        Me.BR_W.Items.AddRange(New Object() {"1200", "2400", "4800", "9600", "19200"})
+        Me.BR_W.Location = New System.Drawing.Point(116, 63)
+        Me.BR_W.Name = "BR_W"
+        Me.BR_W.Size = New System.Drawing.Size(137, 24)
+        Me.BR_W.TabIndex = 29
+        '
+        'DB_W
+        '
+        Me.TableLayoutPanel1.SetColumnSpan(Me.DB_W, 2)
+        Me.DB_W.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DB_W.FormattingEnabled = True
+        Me.DB_W.Items.AddRange(New Object() {"5", "6", "7", "8", "9"})
+        Me.DB_W.Location = New System.Drawing.Point(116, 123)
+        Me.DB_W.Name = "DB_W"
+        Me.DB_W.Size = New System.Drawing.Size(137, 24)
+        Me.DB_W.TabIndex = 31
+        '
+        'HS_W
+        '
+        Me.TableLayoutPanel1.SetColumnSpan(Me.HS_W, 2)
+        Me.HS_W.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HS_W.FormattingEnabled = True
+        Me.HS_W.Location = New System.Drawing.Point(116, 183)
+        Me.HS_W.Name = "HS_W"
+        Me.HS_W.Size = New System.Drawing.Size(137, 24)
+        Me.HS_W.TabIndex = 33
+        '
+        'Handshake
+        '
+        Me.Handshake.AutoSize = True
+        Me.Handshake.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Handshake.Location = New System.Drawing.Point(3, 180)
+        Me.Handshake.Name = "Handshake"
+        Me.Handshake.Size = New System.Drawing.Size(107, 30)
+        Me.Handshake.TabIndex = 32
+        Me.Handshake.Text = "Handshake"
+        Me.Handshake.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Keys
         '
@@ -550,60 +487,6 @@ Partial Class Settings
         Me.btn_save.TabIndex = 1
         Me.btn_save.UseVisualStyleBackColor = True
         '
-        'BR_W
-        '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.BR_W, 2)
-        Me.BR_W.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BR_W.FormattingEnabled = True
-        Me.BR_W.Items.AddRange(New Object() {"1200", "2400", "4800", "9600", "19200"})
-        Me.BR_W.Location = New System.Drawing.Point(116, 63)
-        Me.BR_W.Name = "BR_W"
-        Me.BR_W.Size = New System.Drawing.Size(137, 24)
-        Me.BR_W.TabIndex = 29
-        '
-        'BR_D
-        '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.BR_D, 2)
-        Me.BR_D.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BR_D.FormattingEnabled = True
-        Me.BR_D.Items.AddRange(New Object() {"1200", "2400", "4800", "9600", "19200"})
-        Me.BR_D.Location = New System.Drawing.Point(422, 63)
-        Me.BR_D.Name = "BR_D"
-        Me.BR_D.Size = New System.Drawing.Size(137, 24)
-        Me.BR_D.TabIndex = 30
-        '
-        'DB_W
-        '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.DB_W, 2)
-        Me.DB_W.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DB_W.FormattingEnabled = True
-        Me.DB_W.Items.AddRange(New Object() {"5", "6", "7", "8", "9"})
-        Me.DB_W.Location = New System.Drawing.Point(116, 123)
-        Me.DB_W.Name = "DB_W"
-        Me.DB_W.Size = New System.Drawing.Size(137, 24)
-        Me.DB_W.TabIndex = 31
-        '
-        'Handshake
-        '
-        Me.Handshake.AutoSize = True
-        Me.Handshake.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Handshake.Location = New System.Drawing.Point(3, 180)
-        Me.Handshake.Name = "Handshake"
-        Me.Handshake.Size = New System.Drawing.Size(107, 30)
-        Me.Handshake.TabIndex = 32
-        Me.Handshake.Text = "Handshake"
-        Me.Handshake.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'HS_W
-        '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.HS_W, 2)
-        Me.HS_W.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HS_W.FormattingEnabled = True
-        Me.HS_W.Location = New System.Drawing.Point(116, 183)
-        Me.HS_W.Name = "HS_W"
-        Me.HS_W.Size = New System.Drawing.Size(137, 24)
-        Me.HS_W.TabIndex = 33
-        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -630,25 +513,19 @@ Partial Class Settings
     Friend WithEvents COMPorts As TabPage
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Label11 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label6 As Label
     Friend WithEvents Keys As TabPage
-    Friend WithEvents SB_D As TextBox
     Friend WithEvents SB_W As TextBox
-    Friend WithEvents DB_D As TextBox
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents btn_cancel As Button
     Friend WithEvents btn_save As Button
-    Friend WithEvents COM_D As ComboBox
+    Friend WithEvents Drucker As ComboBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents COM_W As ComboBox
@@ -659,12 +536,9 @@ Partial Class Settings
     Friend WithEvents Send_W As TextBox
     Friend WithEvents Label21 As Label
     Friend WithEvents Send_D As TextBox
-    Friend WithEvents P_D As ComboBox
     Friend WithEvents P_W As ComboBox
     Friend WithEvents cb_Waage As CheckBox
-    Friend WithEvents cb_Drucker As CheckBox
     Friend WithEvents BR_W As ComboBox
-    Friend WithEvents BR_D As ComboBox
     Friend WithEvents DB_W As ComboBox
     Friend WithEvents HS_W As ComboBox
     Friend WithEvents Handshake As Label

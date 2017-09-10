@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Aktuelller_Wert.vb" />
+    <Compile Include="Classes\myPrinter.vb" />
     <Compile Include="Classes\NORDSON.vb" />
     <Compile Include="Classes\PAGENDARM.vb" />
     <Compile Include="Classes\RECO.vb" />

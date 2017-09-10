@@ -7,7 +7,6 @@ Public Class Waage
     Delegate Sub SetTextCallback(ByVal [text] As String) 'Added to prevent threading errors during receiveing of data
     Private Sub Init_Click(sender As Object, e As EventArgs) Handles init.Click
         Dim w_parity As Parity
-        Dim d_parity As Parity
         Dim hs_w As Handshake
         If My.Settings.Hand_Shake_W = "RequestToSend" Then
             hs_w = IO.Ports.Handshake.RequestToSend
@@ -29,42 +28,6 @@ Public Class Waage
             w_parity = IO.Ports.Parity.Space
         Else
             w_parity = IO.Ports.Parity.None
-        End If
-        If My.Settings.Parity_Drucker = "Even" Then
-            d_parity = IO.Ports.Parity.Even
-        ElseIf My.Settings.Parity_Drucker = "Odd" Then
-            d_parity = IO.Ports.Parity.Odd
-        ElseIf My.Settings.Parity_Drucker = "Mark" Then
-            d_parity = IO.Ports.Parity.Mark
-        ElseIf My.Settings.Parity_Drucker = "Space" Then
-            d_parity = IO.Ports.Parity.Space
-        Else
-            d_parity = IO.Ports.Parity.None
-        End If
-        If My.Settings.D_on = True Then
-            Try
-                SP_Drucker.PortName = My.Settings.COM_Drucker
-                SP_Drucker.BaudRate = My.Settings.Baud_Rate_Drucker
-                SP_Drucker.Parity = d_parity
-                SP_Drucker.DataBits = My.Settings.Data_Bits_Drucker
-                SP_Drucker.StopBits = My.Settings.Stop_Bits_Drucker
-                SP_Drucker.Open()
-                init.Enabled = False
-                F1.Enabled = True
-                F2.Enabled = True
-                F3.Enabled = True
-                F5.Enabled = True
-                F6.Enabled = True
-                F7.Enabled = True
-                F8.Enabled = True
-                F9.Enabled = True
-                F10.Enabled = True
-                F11.Enabled = True
-                disconnect.Enabled = True
-            Catch ex As Exception
-                ' Show the exception's message.
-                MessageBox.Show("Auf Drucker kann nicht zugegriffen werden!")
-            End Try
         End If
         If My.Settings.W_on = True Then
             Try
@@ -139,7 +102,6 @@ Public Class Waage
 
     Private Sub Disconnect_Click(sender As Object, e As EventArgs) Handles disconnect.Click
         SP_Waage.Close()
-        SP_Drucker.Close()
         init.Enabled = True
         F1.Enabled = False
         F2.Enabled = False

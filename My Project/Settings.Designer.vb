@@ -104,54 +104,6 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("9600")>  _
-        Public Property Baud_Rate_Drucker() As String
-            Get
-                Return CType(Me("Baud_Rate_Drucker"),String)
-            End Get
-            Set
-                Me("Baud_Rate_Drucker") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Even")>  _
-        Public Property Parity_Drucker() As String
-            Get
-                Return CType(Me("Parity_Drucker"),String)
-            End Get
-            Set
-                Me("Parity_Drucker") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("8")>  _
-        Public Property Data_Bits_Drucker() As String
-            Get
-                Return CType(Me("Data_Bits_Drucker"),String)
-            End Get
-            Set
-                Me("Data_Bits_Drucker") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
-        Public Property Stop_Bits_Drucker() As String
-            Get
-                Return CType(Me("Stop_Bits_Drucker"),String)
-            End Get
-            Set
-                Me("Stop_Bits_Drucker") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public Property COM_Waage() As String
             Get
@@ -165,12 +117,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property COM_Drucker() As String
+        Public Property Drucker() As String
             Get
-                Return CType(Me("COM_Drucker"),String)
+                Return CType(Me("Drucker"),String)
             End Get
             Set
-                Me("COM_Drucker") = value
+                Me("Drucker") = value
             End Set
         End Property
         
@@ -183,18 +135,6 @@ Namespace My
             End Get
             Set
                 Me("Send_Waage") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property Send_Drucker() As String
-            Get
-                Return CType(Me("Send_Drucker"),String)
-            End Get
-            Set
-                Me("Send_Drucker") = value
             End Set
         End Property
         
@@ -219,18 +159,6 @@ Namespace My
             End Get
             Set
                 Me("W_on") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property D_on() As String
-            Get
-                Return CType(Me("D_on"),String)
-            End Get
-            Set
-                Me("D_on") = value
             End Set
         End Property
     End Class
